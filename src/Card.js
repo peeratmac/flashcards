@@ -2,7 +2,7 @@ class Card {
   constructor(cardObject = {}) {
     this.id = cardObject.id;
     this.question = cardObject.question;
-    this.possibleAnswers = cardObject.possibleAnswers;
+    this.answers = cardObject.answers;
     this.correctAnswer = cardObject.correctAnswer;
   }
 }
