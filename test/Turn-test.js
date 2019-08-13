@@ -62,13 +62,19 @@ describe('Turn', () => {
       correctAnswer: 'object'
     });
 
+    const cardNewest = new Card({
+      id: 2,
+      question: 'What is the letter after X?',
+      answers: ['Y', 'Z', 'A'],
+      correctAnswer: 'Y'
+    });
+
     const guess1 = new Turn('X', cardNew);
     const guess2 = new Turn('object', cardNew);
+    const guess3 = new Turn('Y', cardNewest);
 
-    console.log(guess1.giveFeedback());
     expect(guess1.giveFeedback()).to.equal('incorrect!');
-
-    console.log(guess2.giveFeedback());
     expect(guess2.giveFeedback()).to.equal('correct!');
+    expect(guess3.giveFeedback()).to.equal('correct!');
   });
 });
