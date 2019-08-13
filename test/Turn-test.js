@@ -61,5 +61,14 @@ describe('Turn', () => {
       answers: ['object', 'array', 'function'],
       correctAnswer: 'object'
     });
+
+    const guess1 = new Turn('X', cardNew);
+    const guess2 = new Turn('object', cardNew);
+
+    console.log(guess1.giveFeedback());
+    expect(guess1.giveFeedback()).to.equal('incorrect!');
+
+    console.log(guess2.giveFeedback());
+    expect(guess2.giveFeedback()).to.equal('correct!');
   });
 });
