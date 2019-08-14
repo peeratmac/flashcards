@@ -7,7 +7,10 @@ const Deck = require('../src/deck');
 const Round = require('../src/round');
 
 class Game {
-  constructor() {}
+  constructor() {
+    this.currentRound;
+    this.round = 0;
+  }
 
   printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
@@ -18,7 +21,9 @@ class Game {
     util.main(round);
   }
 
-  start() {}
+  // start(mapThisArray) {
+  //   const deck = new Deck(mapThisArray.map())
+  // }
 }
 
 module.exports = Game;
