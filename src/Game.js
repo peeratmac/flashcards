@@ -6,10 +6,36 @@ const Turn = require('../src/turn');
 const Deck = require('../src/deck');
 const Round = require('../src/round');
 
+// TODO:  Your Game class should meet these other requirements:
+// TODO: Should keep track of the currentRound
+// TODO: start: method that starts everything
+// TODO: Creates Cards
+// TODO: Puts Cards in a Deck
+// TODO: Creates a new Round using the Deck
+// TODO: invokes printMessage to display the message in the CLI
+// TODO: invokes printQuestion to kick off our helper functions that allow interaction via the CLI
+
+// ! game.currentRound; // => Round {...} (The new Round object that has been instatiated)
+
 class Game {
   constructor() {
-    this.currentRound;
     this.round = 0;
+    this.currentRound;
+  }
+
+  start() {
+    const cards = prototypeQuestions.map(object => {
+      const card = new Card({ ...object });
+      return card;
+    });
+    const deck = new Deck(cards);
+
+    const round = new Round(deck);
+    this.currentRound = round;
+
+    this.printMessage(deck, round);
+    this.printQuestion(round);
+    this.round++;
   }
 
   printMessage(deck, round) {
@@ -20,10 +46,6 @@ class Game {
   printQuestion(round) {
     util.main(round);
   }
-
-  // start(mapThisArray) {
-  //   const deck = new Deck(mapThisArray.map())
-  // }
 }
 
 module.exports = Game;
