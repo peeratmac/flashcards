@@ -22,7 +22,7 @@ describe('Game', () => {
     expect(game).to.be.an.instanceof(Game);
   });
 
-  it('should be able to start a game', () => {
+  it('should be able to start a game (game.start()) and it should know number of rounds', () => {
     game.start();
     console.log(game.round);
     expect(game.round).to.equal(1);
@@ -32,5 +32,11 @@ describe('Game', () => {
     game.start();
     console.log(game.round);
     expect(game.round).to.equal(5);
+  });
+
+  it('should know the prototypeQuestions contain 30 questions', () => {
+    game.start();
+    console.log(game.deck.deckOfCards.length);
+    expect(game.deck.deckOfCards.length).to.equal(30);
   });
 });

@@ -36,6 +36,10 @@ beforeEach(() => {
   round = new Round(deck);
 });
 
+afterEach(() => {
+  round.turns = 0;
+});
+
 describe('Round', () => {
   it('should be a function', () => {
     expect(Round).to.be.a('function');
