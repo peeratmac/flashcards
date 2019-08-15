@@ -34,9 +34,9 @@ describe('Game', () => {
     expect(game.round).to.equal(5);
   });
 
-  it.only('should know the prototypeQuestions contain 30 questions', () => {
+  it('should know the prototypeQuestions contain 30 questions', () => {
     game.start();
     console.log(game.deck.deckOfCards.length);
-    // expect(game.deck.deckOfCards.length).to.equal(30);
+    expect(game.deck.deckOfCards.length).to.equal(30);
   });
 });

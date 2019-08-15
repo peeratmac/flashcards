@@ -19,9 +19,7 @@ class Game {
         return new Card(cardObject);
       })
     );
-
     this.currentRound = new Round(this.deck);
-
     this.printMessage(this.deck, this.currentRound);
     this.printQuestion(this.currentRound);
     this.round++;
