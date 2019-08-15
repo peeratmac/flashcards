@@ -29,7 +29,7 @@ class Round {
 
   endRound() {
     const percentCorrect = this.calculatePercentCorrect();
-    if (percentCorrect < 90) {
+    if (percentCorrect < 80) {
       console.log('test: < 90%');
       console.log(this.game.round);
       this.game.start(prototypeQuestions);
