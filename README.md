@@ -32,7 +32,7 @@ Node server running on port 3000
 
 When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
 
-![flash cards 1](https://media.giphy.com/media/ZdqxqobsVUaNQd5whu/giphy.gif)
+![flash cards 1](https://raw.githubusercontent.com/peeratmac/flashcards/master/screenshots/gamplay-sample.gif?token=ALIRHVT7LH2BID5SHZ2L65K5KY5BS)
 
 ![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
 
