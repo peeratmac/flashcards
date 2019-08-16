@@ -1,11 +1,5 @@
 const Turn = require('../src/turn');
 const data = require('./data');
-// ! testing
-const prototypeQuestions = data.prototypeData;
-const Deck = require('../src/deck');
-const Game = require('../src/Game');
-const Card = require('../src/Card');
-const util = require('./util');
 
 class Round {
   constructor(deck, game) {
@@ -32,20 +26,23 @@ class Round {
     return 100 - (this.incorrectGuesses.length / this.turns) * 100;
   }
 
+  returnEndRoundString() {
+    return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly`;
+  }
+
   endRound() {
-    // const percentCorrect = this.calculatePercentCorrect();
+    // Create the percent and display first message
+    const percentCorrect = this.calculatePercentCorrect();
+    const roundOverString = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly`;
 
-    console.log(
-      `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly`
-    );
+    if (percentCorrect < 90) {
+      console.log(roundOverString + '. Less than 90%?? We must play again.');
+      this.game.start();
+    } else {
+      console.log('Ok, you are awesome!');
+    }
 
-    // ? does not work right now (want to start new game if answer < 90%)
-    // if (percentCorrect < 90) {
-    //   console.log('test');
-    //   this.start();
-    // } else if (percentCorrect < 100) {
-    //   console.log('Ok, you are good, but you should try to get 100!');
-    // }
+    return roundOverString;
   }
 }
 

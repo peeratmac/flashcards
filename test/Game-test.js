@@ -7,6 +7,9 @@ const Card = require('../src/Card');
 const Deck = require('../src/deck');
 const Turn = require('../src/turn');
 
+const data = require('../src/data');
+const prototypeQuestions = data.prototypeData;
+
 var game;
 
 beforeEach(() => {
@@ -36,7 +39,7 @@ describe('Game', () => {
 
   it('should know the prototypeQuestions contain 30 questions', () => {
     game.start();
-    console.log(game.deck.deckOfCards.length);
-    expect(game.deck.deckOfCards.length).to.equal(30);
+    console.log(prototypeQuestions.length);
+    expect(prototypeQuestions.length).to.equal(30);
   });
 });

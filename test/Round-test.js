@@ -6,6 +6,8 @@ const Card = require('../src/Card');
 const Deck = require('../src/deck');
 const Turn = require('../src/turn');
 
+const Game = require('../src/Game');
+
 var round, deck, card1, card2, card3, cards;
 
 beforeEach(() => {

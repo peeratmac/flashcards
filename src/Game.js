@@ -13,16 +13,21 @@ class Game {
   }
 
   start() {
-    this.deck = new Deck(
-      prototypeQuestions.map(cardObject => new Card(cardObject))
-    );
-    this.currentRound = new Round(this.deck);
-    this.printMessage(this.deck, this.currentRound);
-    this.printQuestion(this.currentRound);
+    // this.deck = new Deck(
+    //   prototypeQuestions.map(cardObject => new Card(cardObject))
+    // );
+    // this.currentRound = new Round(this.deck);
+    // this.printMessage(this.deck, this.currentRound);
+    // this.printQuestion(this.currentRound);
+
+    const deck = new Deck(prototypeQuestions);
+    const round = new Round(deck, this);
+    this.printMessage(deck);
+    this.printQuestion(round);
     this.round++;
   }
 
-  printMessage(deck) {
+  printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`);
   }
