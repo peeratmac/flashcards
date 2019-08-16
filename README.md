@@ -1,6 +1,6 @@
 # FlashCards with node.js
 
-![flash cards 1](https://raw.githubusercontent.com/peeratmac/flashcards/master/screenshots/gamplay-sample.gif?token=ALIRHVT7LH2BID5SHZ2L65K5KY5BS)
+![flash cards 1](screenshots/gamplay-sample.gif)
 
 ## About
 
