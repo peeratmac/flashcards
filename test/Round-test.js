@@ -95,6 +95,9 @@ describe('Round', () => {
 
   it('should be able to endRound and give the percentage of guesses that were correct', () => {
     round.takeTurn('sea otter');
+    expect(round.endRound()).to.equal(
+      '** Round over! ** You answered 100% of the questions correctly'
+    );
     round.takeTurn('WRONG');
     round.takeTurn('WRONG AGAIN');
     expect(round.endRound()).to.equal(

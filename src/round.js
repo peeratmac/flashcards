@@ -31,7 +31,6 @@ class Round {
   }
 
   endRound() {
-    // Create the percent and display first message
     const percentCorrect = this.calculatePercentCorrect();
     const roundOverString = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly`;
 
@@ -39,9 +38,8 @@ class Round {
       console.log(roundOverString + '. Less than 90%?? We must play again.');
       this.game.start();
     } else {
-      console.log('Ok, you are awesome!');
+      console.log(roundOverString);
     }
-
     return roundOverString;
   }
 }

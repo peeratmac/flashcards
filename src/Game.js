@@ -13,15 +13,9 @@ class Game {
   }
 
   start() {
-    // this.deck = new Deck(
-    //   prototypeQuestions.map(cardObject => new Card(cardObject))
-    // );
-    // this.currentRound = new Round(this.deck);
-    // this.printMessage(this.deck, this.currentRound);
-    // this.printQuestion(this.currentRound);
-
     const deck = new Deck(prototypeQuestions);
     const round = new Round(deck, this);
+    // this.currentRound = new Round(this.deck);
     this.printMessage(deck);
     this.printQuestion(round);
     this.round++;
